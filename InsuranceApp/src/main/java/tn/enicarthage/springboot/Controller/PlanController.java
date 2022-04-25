@@ -1,18 +1,21 @@
-package tn.enicarthage.springboot;
-
+package tn.enicarthage.springboot.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import tn.enicarthage.springboot.Entity.Plan;
+import tn.enicarthage.springboot.Service.PlanService;
+
 import java.util.List;
-import tn.enicarthage.springboot.model.*;
-import tn.enicarthage.springboot.service.*;
 
 //CONTROLLER
 
 @RestController
 @RequestMapping("/plan")
 public class PlanController {
-    private final PlanService planService;
+	@Autowired
+    private  PlanService planService;
     
     public PlanController(PlanService planService) {
 		

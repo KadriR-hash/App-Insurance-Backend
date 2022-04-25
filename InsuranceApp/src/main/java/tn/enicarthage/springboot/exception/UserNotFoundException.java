@@ -1,4 +1,4 @@
-package tn.enicarthage.springboot.exception;
+package tn.enicarthage.springboot.Exception;
 
 public class UserNotFoundException extends RuntimeException {
     /**

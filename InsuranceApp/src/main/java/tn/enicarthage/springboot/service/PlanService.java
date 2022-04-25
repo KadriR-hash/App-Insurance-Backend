@@ -1,18 +1,21 @@
-package tn.enicarthage.springboot.service;
+package tn.enicarthage.springboot.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.List;
-import tn.enicarthage.springboot.model.*;
-import tn.enicarthage.springboot.exception.*;
-import tn.enicarthage.springboot.repository.*;
+import tn.enicarthage.springboot.Entity.Plan;
+import tn.enicarthage.springboot.Exception.UserNotFoundException;
+import tn.enicarthage.springboot.Repository.PlanRepo;
+
+
 
 @Service
 @Transactional
 public class PlanService {
-    private final PlanRepo planRepo ;
+	@Autowired
+    private  PlanRepo planRepo ;
     
-    @Autowired
+    
     public PlanService(PlanRepo planRepo) {
         this.planRepo = planRepo;
     }

@@ -1,10 +1,10 @@
 package tn.enicarthage.springboot;
 
 import java.util.Arrays;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
@@ -33,6 +33,12 @@ public class InsuranceAppApplication {
 		urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
 		return new CorsFilter(urlBasedCorsConfigurationSource);
 	}
+	
+	/*@Bean(name="entityManagerFactory")
+	public LocalSessionFactoryBean sessionFactory() {
+	LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+	return sessionFactory;
+	}*/
 
 	
 	
